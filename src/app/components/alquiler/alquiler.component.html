@@ -1,0 +1,45 @@
+<h3>Generar Balance del Cliente</h3>
+<form  (ngSubmit)="onSubmit()">
+    <div class="form-row">
+        
+      <div class="form-group col-md-3">
+        <label for="inputNombre">Nombre</label>
+        <input type="text" class="form-control" name="nombre" placeholder="nombre"  [(ngModel)]="persona.nombre" >
+      </div>
+      <div class="form-group col-md-3">
+        <label for="inputApellido">Apellido</label>
+        <input type="text" class="form-control" name="apellido" placeholder="apellido" [(ngModel)]="persona.apellido" >
+      </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-3">
+          <label for="inputDocumento">Documento</label>
+          <input type="text" class="form-control" id="inputDocumento" name="documento" [(ngModel)]="persona.documento" >
+        </div>        
+      </div>
+    
+      <button type="submit" class="btn btn-primary" >Consultar</button>
+   
+</form>
+
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Estado</th>
+        <th scope="col">Fecha Alquiler</th>
+        <th scope="col">Fecha Entrega</th>        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let alquilerItem of alquiler">
+        <td >{{alquilerItem.estado}}</td>
+        <td>{{alquilerItem.createAt}}</td>
+        <td>{{alquilerItem.fechaEntrega}}</td>       
+      </tr>      
+    </tbody>
+  </table>
+
+ 
+</div>
+  

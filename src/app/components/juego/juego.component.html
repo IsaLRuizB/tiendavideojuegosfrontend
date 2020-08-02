@@ -1,0 +1,44 @@
+<h3>Buscar por título del juego</h3>
+<form  (ngSubmit)="onSubmit()">
+    <div class="form-row">
+       
+      <div class="form-group col-md-3">
+        <label for="inputNombre">Título Juego</label>
+        <input type="text" class="form-control" name="Titulo" placeholder="titulo"  [(ngModel)]="datosJuego.titulo" >
+      </div>
+    </div>
+    
+      <button type="submit" class="btn btn-primary" >Consultar</button>
+      
+</form>
+
+<div class="container">
+  <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Título</th>
+            <th scope="col">Protagonista</th>
+            <th scope="col">Marca</th>   
+            <th scope="col">Productor</th>
+            <th scope="col">Director</th>
+            <th scope="col">Tecnología</th>  
+            <th scope="col">Precio Venta</th>
+            <th scope="col">Precio Alquiler</th>     
+        </tr>
+        </thead>
+        <tbody>
+        <tr >
+            <td >{{juegos.titulo}}</td>
+            <td>{{juegos.protagonista}}</td>
+            <td>{{juegos.marca}}</td>       
+            <td >{{juegos.productor}}</td>
+            <td>{{juegos.director}}</td>
+            <td>{{juegos.tecnologia}}</td>  
+            <td>{{juegos.precioVenta}}</td>
+            <td>{{juegos.precioAlquiler}}</td>  
+        </tr>      
+        </tbody>
+  </table>
+
+ 
+</div>
